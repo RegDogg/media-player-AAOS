@@ -1,6 +1,11 @@
-# VLC for Android
+# Media Player for Android Automotive OS powered by VLC
 
-This is the official **Android** port of [VLC](https://videolan.org/vlc/).
+This is an unofficial **AAOS** fork of [VLC on Android](https://videolan.org/vlc/).
+
+### Note:
+A portion of this source code has been modified to run natively on any Android Automotive OS powered vehicle.
+This application is planned to be uploaded to the Google Play Store as long as the LGPL license is followed.
+(e.g. General Motors, Rivian, Lucid, Volvo/Polestar, BMW, etc.)
 
 VLC on Android plays all the same files as the classical version of VLC, and features a media database
 for Audio and Video files and stream.
