@@ -43,6 +43,8 @@
     <string name="playback_controls">Controls de la reproducció</string>
     <string name="medialibrary_scan">Escaneig de la biblioteca multimèdia</string>
     <string name="Medialibrary_progress">Actualitzacions de l\'escaneig de la biblioteca de medis</string>
+    <string name="ml_database_warning">La vostra base de dades conté la llista de tots els vostres continguts multimèdia. Es compartirà amb els desenvolupadors del VLC.</string>
+    <string name="logs_warning">Pot contenir informació sobre els fitxers multimèdia que heu reproduït. Es compartirà amb els desenvolupadors del VLC.</string>
     <string name="play_from_start">Reprodueix des de l\'inici</string>
     <string name="play_as_audio">Reprodueix com a àudio</string>
     <string name="play_as_video">Reprodueix com a vídeo</string>
@@ -434,6 +436,9 @@
     <string name="subtitles_prefs_category">Subtítols</string>
     <string name="subtitles_size_title">Mida dels subtítols</string>
     <string name="subtitles_presets_title">Valors predefinits dels subtítols</string>
+    <string name="subtitles_size_nano">Nano</string>
+    <string name="subtitles_size_micro">Micro</string>
+    <string name="subtitles_size_smallest">El més petit</string>
     <string name="subtitles_size_small">Petita</string>
     <string name="subtitles_size_normal">Normal</string>
     <string name="subtitles_size_big">Gran</string>
@@ -631,6 +636,7 @@
     <string name="no_internet_connection">Comproveu la connexió a internet</string>
     <string name="retry">Tornar a provar</string>
     <string name="open_subs_download_error">OpenSubtitles no està disponible actualment. Torneu-ho a provar més tard</string>
+    <string name="open_subs_download_link_error">Hi ha un problema amb OpenSubtitles. Torneu-ho a provar més tard.</string>
 
     <string name="network_browsing">Xarxa local</string>
     <string name="browsing">Navegació</string>
@@ -1327,6 +1333,11 @@
     <string name="ra_otp_title">Intent d\'inici de sessió d\'accés remot</string>
     <string name="ra_otp_subtitle">Si ets tu, introdueix aquest codi a l\'altre dispositiu</string>
     <string name="ra_otp_not_me">No sóc jo</string>
+    <string name="ra_output">Sortida d\'àudio</string>
+    <string name="ra_play_on_browser">Reprodueix al navegador</string>
+    <string name="ra_play_on_device">Reprodueix al dispositiu</string>
+    <string name="ra_browser_audio_not_found">No s\'ha trobat el contingut multimèdia o no es pot reproduir al navegador</string>
+    <string name="ra_browser_audio_unsupported_format">Aquest format d\'àudio no és compatible amb el vostre navegador</string>
 
     <string name="ra_onboarding_welcome_desc">Benvingut a l\'accés remot del VLC per a Android\nEn habilitar-lo, podreu controlar la reproducció d\'aquest dispositiu i més</string>
     <string name="ra_onboarding_how_title">Controla el vostre dispositiu</string>

@@ -117,6 +117,7 @@ class EqualizerFragmentDialog : VLCBottomSheetDialogFragment(), Slider.OnChangeL
                 fillPreamp()
             }
 
+            if (oldCurrentEqualizer == null) fillViews()
             if (binding.equalizerBands.isEmpty() || viewModel.needForceRefresh || oldCurrentEqualizer == null || oldCurrentEqualizer?.equalizerEntry?.id != viewModel.getCurrentEqualizer().equalizerEntry.id) {
                 fillBands()
                 viewModel.needForceRefresh = false
@@ -124,7 +125,6 @@ class EqualizerFragmentDialog : VLCBottomSheetDialogFragment(), Slider.OnChangeL
                 updateEnabledState()
             }
             binding.undo.isEnabled = viewModel.history.isNotEmpty()
-            if (oldCurrentEqualizer == null) fillViews()
             oldEqualiserSets = newEqualizerSets
             oldCurrentEqualizer = viewModel.getCurrentEqualizer()
             updateEqualizer(true)
@@ -351,6 +351,9 @@ class EqualizerFragmentDialog : VLCBottomSheetDialogFragment(), Slider.OnChangeL
      */
     private fun updateBars() {
         if (!isStarted()) return
+        //not ready yet
+        if (binding.equalizerBands.isEmpty()) return
+        if (binding.equalizerBands.childCount != viewModel.bandCount) throw IllegalStateException("Invalid number of bars")
 
         binding.equalizerPreamp.value = viewModel.getCurrentEqualizer().equalizerEntry.preamp.roundToInt().toFloat()
         for (i in 0 until viewModel.bandCount) {
@@ -405,8 +408,8 @@ class EqualizerFragmentDialog : VLCBottomSheetDialogFragment(), Slider.OnChangeL
                 return
             viewModel.saveInHistory(index)
 
-            newBandList = ArrayList<EqualizerBand>()
-            newBandList.add(viewModel.getCurrentEqualizer().bands.first { it.index ==  index}.copy(bandValue = value))
+            newBandList = ArrayList()
+            newBandList.add(viewModel.getCurrentEqualizer().bands.firstOrNull { it.index ==  index}?.copy(bandValue = value) ?: EqualizerBand(index, value))
             if (!binding.equalizerButton.isChecked)
                 binding.equalizerButton.isChecked = true
 
