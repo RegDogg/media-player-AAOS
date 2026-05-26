@@ -43,8 +43,8 @@ allprojects {
 }
 
 ext {
-    appId = "com.RegDogg.vlc"
-    versionCode = 6
+    appId = "com.RegDogg.aaos.mediaplayer"
+    versionCode = 0
     versionName = project.hasProperty('forceVlc4') && project.getProperty('forceVlc4') ? '4.0.0-preview - ' + versionCode : '3.7.0 Beta 4'
     vlcMajorVersion = project.hasProperty('forceVlc4') && project.getProperty('forceVlc4') ? 4 : 3
     versionName = vlcMajorVersion == 3 ? '3.7.1' : '4.0.0-preview - ' + versionCode
