@@ -8,9 +8,7 @@
     <uses-permission
         android:name="android.permission.READ_LOGS"
         android:maxSdkVersion="18"/> <!-- android:maxSdkVersion="15" -->
-    <!-- vibration on audioplayer buttons long press -->
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.VIBRATE"/> <!-- used for setting ringtone -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/> <!-- STORAGE -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Internet -->
@@ -72,15 +70,6 @@
     </queries>
 
     <application>
-
-        <!-- Enable VLC in Samsung multiwindow mode -->
-        <meta-data
-            android:name="com.samsung.android.sdk.multiwindow.enable"
-            android:value="true"/>
-        <!-- Enable VLC in LG split window mode -->
-        <meta-data
-            android:name="com.lge.support.SPLIT_WINDOW"
-            android:value="true"/>
 
         <activity
             android:name=".StartActivity"
@@ -1091,12 +1080,6 @@
             android:resizeableActivity="true"
             android:supportsPictureInPicture="true"
             android:theme="@style/Theme.VLC.Player">
-
-            <intent-filter>
-                <action android:name="com.samsung.android.support.REMOTE_ACTION" />
-            </intent-filter>
-            <meta-data android:name="com.samsung.android.support.REMOTE_ACTION"
-                android:resource="@xml/air_actions"/>
         </activity>
         <activity
             android:name=".gui.DialogActivity"
